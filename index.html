@@ -1,5 +1,5 @@
 <!--
-kommentar!
+kommentar! ctrl "mellanslag" och välj sample.
 -->
 
 <!DOCTYPE html>
@@ -7,16 +7,36 @@ kommentar!
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>ToDo-list</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script defer src='main.js'></script>
 </head>
 <body>
-    <button type="button">Click me!</button>
-    <p id="usertext"></p>
+    <h1>Min ToDo-lista</h1>
+    <p id="completedElement">0 färdiga</p>
 
-    <p>Change color when clicking button</p>
-    <button type="button" id="colorButton">Change color</button>
+    <label for="input1">Ny uppgift:</label>
+    <input type="text" id="inputToDo" placeholder="Skriv in ny uppgift här">
+    <button type="button" class="btnStyle" id="addTodoBtn"> Click to add</button>
+    <div></div>
+    <small>info text</small>
+<div>
+    <ul id="todoList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+<div>
+    <p>Second list</p>
+    <ul id="secondList">
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+</div>
+
+
 </body>
 </html>

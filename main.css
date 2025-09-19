@@ -7,3 +7,12 @@ Shift alt A = kommentera markerade rader
  body {
     background-color: aqua
  }
+
+ .btnStyle {
+   color: blue;
+ }
+
+.completed {
+   text-decoration: line-through;
+   color: grey;
+}
