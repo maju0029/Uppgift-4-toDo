@@ -5,7 +5,7 @@ const addTodoBtn = document.querySelector("#addTodoBtn");
 const infoTextElement = document.querySelector("small");
 let todoText = "";
 let completed = 0;
-
+const allTheTodos = [];
 
 const todoList = document.querySelector("#todoList");
 const secondList = document.querySelector("#secondList");
@@ -19,11 +19,26 @@ function addTodo() {
         infoTextElement.textContent = "Men snälla du, skriv in något!";
         return;
     }
+
+    allTheTodos.push(todoText);
     const item = document.createElement('li');
     todoList.appendChild(item);
     const itemText = document.createElement('span');
-    itemText.innerText = todoText;
-    item.appendChild(itemText);
 
-    inputToDo.value = "";
-}
+    itemText.innerText = todoText;
+        itemText.addEventListener("click", 
+            function() {
+                if (itemText.classList.contains("completed")) {
+                    itemText.setAttribute("class", "");
+                    completed--;
+                    completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                } else {
+                    itemText.setAttribute("class", "completed");
+                    completed++;
+                    completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                }
+            }
+        );
+        item.appendChild(itemText);
+        inputToDo.value = "";
+    }
