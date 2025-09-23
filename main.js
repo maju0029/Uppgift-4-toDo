@@ -1,4 +1,3 @@
-//javascript för todolista. För move item. "Bra att ha samma id som på variabeln".
 const completedElement = document.querySelector("#completedElement");
 const inputToDo = document.querySelector("#inputToDo");
 const addTodoBtn = document.querySelector("#addTodoBtn");
@@ -11,8 +10,14 @@ const todoList = document.querySelector("#todoList");
 const secondList = document.querySelector("#secondList");
 addTodoBtn.addEventListener("click", addTodo);
 
+function changeStatus(todoText, completed) {
+    
+    let findIndex = allTheTodos.map(t => t.name).indexOf(todoText);
+    allTheTodos[findIndex].completed = completed;
+}
+
 function addTodo() {
-    //Kod för att flytta ett objekt från input till en lista.
+    
     infoTextElement.textContent ="";
     todoText = inputToDo.value;
     if (todoText === "") {
@@ -20,9 +25,13 @@ function addTodo() {
         return;
     }
 
-    allTheTodos.push(todoText);
+    
+    const todoObject = { name: todoText, completed: false };
+    allTheTodos.push(todoObject);
+
     const item = document.createElement('li');
     todoList.appendChild(item);
+
     const itemText = document.createElement('span');
 
     itemText.innerText = todoText;
@@ -32,13 +41,27 @@ function addTodo() {
                     itemText.setAttribute("class", "");
                     completed--;
                     completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                    changeStatus(itemText.innerText, false);
                 } else {
                     itemText.setAttribute("class", "completed");
                     completed++;
                     completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                    changeStatus(itemText.innerText, true);
                 }
             }
         );
         item.appendChild(itemText);
+
+    const trashcan = document.createElement('span');
+    trashcan.innerHTML = '&#128465';
+    trashcan.classList.add("trashcan");
+    item.appendChild(trashcan);
+    trashcan.addEventListener("click", function() {
+        item.remove();
+        let removeText = itemText.firstChild.textContent;
+        let indexToRemove = allTheTodos.map(t => t.name).indexOf(removeText);
+        allTheTodos.splice(indexToRemove, 1);
+    })
+
         inputToDo.value = "";
     }

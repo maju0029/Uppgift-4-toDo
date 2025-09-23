@@ -5,7 +5,9 @@ Shift alt A = kommentera markerade rader
  */
 
  body {
+
     background-color: aqua
+
  }
 
  .btnStyle {
@@ -15,4 +17,12 @@ Shift alt A = kommentera markerade rader
 .completed {
    text-decoration: line-through;
    color: grey;
+}
+
+.trashcan {
+
+font-size: large;
+margin-left: 3px;
+cursor: pointer;
+
 }
