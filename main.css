@@ -4,15 +4,14 @@ Shift alt A = kommentera markerade rader
 
  */
 
- body {
+body {
 
-    background-color: aqua
+   background-color: aqua
+}
 
- }
-
- .btnStyle {
+.btnStyle {
    color: blue;
- }
+}
 
 .completed {
    text-decoration: line-through;
@@ -21,8 +20,8 @@ Shift alt A = kommentera markerade rader
 
 .trashcan {
 
-font-size: large;
-margin-left: 3px;
-cursor: pointer;
+   font-size: large;
+   margin-left: 3px;
+   cursor: pointer;
 
 }
