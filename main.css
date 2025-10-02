@@ -1,12 +1,13 @@
-/* 
-Shift alt A = kommentera markerade rader
-
-
- */
-
 body {
+  display: flex;
+  flex-direction: column; /* stapla uppifrån och ned */
+  align-items: center;    /* centrera horisontellt */
+  min-height: 100vh;
+  background-color: hotpink;
+}
 
-   background-color: aqua
+h1 {
+  margin-bottom: 20px; /* lite luft mellan rubrik och input */
 }
 
 .btnStyle {
@@ -19,9 +20,21 @@ body {
 }
 
 .trashcan {
-
    font-size: large;
    margin-left: 3px;
    cursor: pointer;
+}
+
+.todoContainer {
+   background-color: white;
+   width: 500px;
+   height: 200px;
+   padding: 10px;
+   border-radius: 1px;
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
 }
