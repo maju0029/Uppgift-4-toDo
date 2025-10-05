@@ -3,11 +3,54 @@ body {
   flex-direction: column; /* stapla uppifrån och ned */
   align-items: center;    /* centrera horisontellt */
   min-height: 100vh;
-  background-color: hotpink;
+    background: linear-gradient(to bottom, 
+    rgb(246, 190, 189),
+    rgb(254, 126, 125));
 }
 
-h1 {
-  margin-bottom: 20px; /* lite luft mellan rubrik och input */
+.todoContainer {
+   background-color: white;
+   width: 500px;
+   height: 200px;
+   padding: 10px;
+   border-radius: 1px;
+   margin-top: 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation-name: todoContainerSlideIn;
+    animation-duration: 1s;
+}
+
+@keyframes todoContainerSlideIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#headline {
+  margin-bottom: 20px;
+  color: black;
+  animation-name: headlineSlideIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes headlineSlideIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .btnStyle {
@@ -23,18 +66,4 @@ h1 {
    font-size: large;
    margin-left: 3px;
    cursor: pointer;
-}
-
-.todoContainer {
-   background-color: white;
-   width: 500px;
-   height: 200px;
-   padding: 10px;
-   border-radius: 1px;
-   margin-top: 20px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
 }

@@ -22,6 +22,7 @@ function addTodo() {
     todoText = inputToDo.value;
     if (todoText === "") {
         infoTextElement.textContent = "Men snälla du, skriv in något!";
+        infoTextElement.style.color = "red";
         return;
     }
 
