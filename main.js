@@ -23,6 +23,7 @@ function addTodo() {
     if (todoText === "") {
         infoTextElement.textContent = "Men snälla du, skriv in något!";
         infoTextElement.style.color = "red";
+        infoTextElement.style.animation = "blink 1s infinite";
         return;
     }
 

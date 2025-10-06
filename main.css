@@ -36,7 +36,6 @@ body {
 
 #headline {
   margin-bottom: 20px;
-  color: black;
   animation-name: headlineSlideIn;
   animation-duration: 1s;
   animation-delay: 1s;
@@ -66,4 +65,19 @@ body {
    font-size: large;
    margin-left: 3px;
    cursor: pointer;
+}
+
+#infoText {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.blink {
+  animation: blink 0.2s linear 1s;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
