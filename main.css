@@ -1,29 +1,28 @@
 body {
   display: flex;
-  flex-direction: column; /* stapla uppifrån och ned */
-  align-items: center;    /* centrera horisontellt */
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
     background: linear-gradient(to bottom, 
     rgb(246, 190, 189),
     rgb(254, 126, 125));
 }
-
-.todoContainer {
+  .box {
    background-color: white;
    width: 500px;
-   height: 200px;
+   height: 250px;
    padding: 10px;
    border-radius: 1px;
-   margin-top: 0px;
+   margin-top: 10px;
    display: flex;
    flex-direction: column;
    align-items: center;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation-name: todoContainerSlideIn;
+    animation-name: boxSlideIn;
     animation-duration: 1s;
-}
+ }
 
-@keyframes todoContainerSlideIn {
+@keyframes boxSlideIn {
   from {
     transform: translateY(-200px);
     opacity: 0;
@@ -34,27 +33,36 @@ body {
   }
 }
 
-#headline {
+.headerInput {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
-  animation-name: headlineSlideIn;
+  opacity: 0;
+  animation-name: headlineInputSlideIn;
   animation-duration: 1s;
   animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes headlineSlideIn {
+@keyframes headlineInputSlideIn {
   from {
     transform: translateY(-200px);
-    opacity: 0;
+    opacity: 0%;
   }
   to {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 1000%;
   }
 }
 
 .btnStyle {
    color: blue;
 }
+
+.inputTodo {
+   border-color: blue;
+   border-width: 2px;}
 
 .completed {
    text-decoration: line-through;
@@ -73,11 +81,24 @@ body {
 }
 
 .blink {
-  animation: blink 1s 1s;
+  animation: blink 0.5s 2s;
 }
 
 @keyframes blink {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.todoContainer {
+   background-color: white;
+   width: 500px;
+   height: 250px;
+   padding: 10px;
+   border-radius: 1px;
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

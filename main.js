@@ -23,11 +23,14 @@ function addTodo() {
     if (todoText === "") {
         infoTextElement.textContent = "Men snälla du, skriv in något!";
         infoTextElement.style.color = "red";
-        infoTextElement.style.animation = "blink 1s 1";
+        infoTextElement.style.animation = "blink 0.5s 2";
         
         infoTextElement.style.animation = "none";
-        requestAnimationFrame(() => {
-        infoTextElement.style.animation = "blink 1s 1";
+        
+        //https://stackoverflow.com/questions/24148403/trigger-css-animation-on-demand
+       
+        requestAnimationFrame(function () {
+        infoTextElement.style.animation = "blink 0.5s 2";
         });
         return;
     }
