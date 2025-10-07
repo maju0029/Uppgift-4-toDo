@@ -69,14 +69,10 @@ body {
   background-color: lightgray;
 }
 
-.inputTodo {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 300px;
-  margin-right: 10px;
-  box-sizing: border-box;}
+.inputToDo:focus {
+ border-color: blue;
+ outline: none;
+}
 
 .completed {
    text-decoration: line-through;
