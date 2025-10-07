@@ -21,7 +21,7 @@ function addTodo() {
     infoTextElement.textContent = "";
     todoText = inputToDo.value;
     if (todoText === "") {
-        infoTextElement.textContent = "Men snälla du, skriv in något!";
+        infoTextElement.textContent = "Input must not be empty";
         infoTextElement.style.color = "red";
         infoTextElement.style.animation = "blink 0.5s 2";
         
@@ -50,12 +50,12 @@ function addTodo() {
             if (itemText.classList.contains("completed")) {
                 itemText.setAttribute("class", "");
                 completed--;
-                completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                completedElement.textContent = completed + " completed";
                 changeStatus(itemText.innerText, false);
             } else {
                 itemText.setAttribute("class", "completed");
                 completed++;
-                completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+                completedElement.textContent = completed + " completed";
                 changeStatus(itemText.innerText, true);
             }
         }
