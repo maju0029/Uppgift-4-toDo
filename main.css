@@ -59,7 +59,8 @@ body {
 .btnStyle {
   background-color: white;
   border: black 1px solid;
-  padding: 10px 20px;
+  padding: 9px 15px;
+  margin: 10px;
   font-size: 20px;
   border-radius: 3px;
   transition: background-color 0.2s;
@@ -67,6 +68,12 @@ body {
 
 .btnStyle:hover {
   background-color: lightgray;
+}
+
+.inputToDo {
+  padding: 10px 10px;
+  font-size: 16px;
+  width: 300px;
 }
 
 .inputToDo:focus {
