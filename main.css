@@ -45,20 +45,18 @@ body {
   align-items: center;
   margin-bottom: 20px;
   opacity: 0;
-  animation-name: headlineInputSlideIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  animation: headlineInputSlideIn 2s ease-out 1s forwards;
 }
 
 @keyframes headlineInputSlideIn {
   from {
-    transform: translateY(-200px);
     opacity: 0%;
   }
   to {
-    transform: translateY(0);
-    opacity: 1000%;
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
   }
 }
 
@@ -68,18 +66,26 @@ body {
   gap: 10px;
 }
 
+#completedElement {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Arial', sans-serif;
+}
+
 .btnStyle {
-  background-color: hsl(0, 7%, 86%);
+  background-color: hwb(0 93% 6%);
   border: black 1px solid;
-  padding: 9px 15px;
+  padding: 8px 15px;
   margin: 1px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 3px;
+  font-family: 'Arial', sans-serif;
   transition: background-color 0.2s;
 }
 
 .btnStyle:hover {
-  background-color: lightgray;
+  background-color: #e6dede;
 }
 
 .inputToDo {

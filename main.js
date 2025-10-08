@@ -25,6 +25,9 @@ function addTodo() {
         infoTextElement.style.color = "red";
         infoTextElement.style.animation = "blink 0.5s 2";
         infoTextElement.style.animation = "none";
+        infoTextElement.style.fontStyle = "italic";
+        infoTextElement.style.fontFamily = "arial";
+
        
         requestAnimationFrame(function () {
         infoTextElement.style.animation = "blink 0.5s 2";
