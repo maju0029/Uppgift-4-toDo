@@ -10,7 +10,7 @@ body {
   .box {
    background-color: white;
    width: 500px;
-   height: 250px;
+   
    padding: 10px;
    border-radius: 1px;
    margin-top: 10px;
@@ -84,6 +84,7 @@ body {
 .completed {
    text-decoration: line-through;
    color: grey;
+   cursor: pointer;
 }
 
 .trashcan {
@@ -96,11 +97,6 @@ body {
   font-size: 60px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-#infoText {
-  display: inline-block;
-  margin-top: 10px;
 }
 
 .blink {
@@ -116,11 +112,25 @@ body {
 .todoContainer {
    background-color: white;
    width: 500px;
-   height: 150px;
+   
    padding: 10px;
    border-radius: 1px;
    margin-top: 0px;
    display: flex;
    flex-direction: column;
    align-items: center;
+}
+
+#todoList {
+   list-style-type: none;
+    padding: 0;
+}
+#todoList li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   font-size: 18px;
+   font-family: 'Arial', sans-serif;
+   padding: 8px 0;
 }

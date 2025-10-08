@@ -24,10 +24,7 @@ function addTodo() {
         infoTextElement.textContent = "Input must not be empty";
         infoTextElement.style.color = "red";
         infoTextElement.style.animation = "blink 0.5s 2";
-        
         infoTextElement.style.animation = "none";
-        
-        //https://stackoverflow.com/questions/24148403/trigger-css-animation-on-demand
        
         requestAnimationFrame(function () {
         infoTextElement.style.animation = "blink 0.5s 2";
@@ -63,7 +60,7 @@ function addTodo() {
     item.appendChild(itemText);
 
     const trashcan = document.createElement('span');
-    trashcan.innerHTML = '&#128465';
+    trashcan.innerHTML = '🗑️';
     trashcan.classList.add("trashcan");
     item.appendChild(trashcan);
     trashcan.addEventListener("click", function () {
@@ -76,13 +73,9 @@ function addTodo() {
         }
 
         allTheTodos.splice(indexToRemove, 1);
-
-        if (allTheTodos.length === 0) {
-            completedElement.textContent = "";
-        } else {
-            completedElement.textContent = "Du har " + completed + " slutförda uppgifter";
+        completedElement.textContent = completed + " completed";
         }
-    })
+    )
 
     inputToDo.value = "";
 }
