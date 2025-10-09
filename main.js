@@ -28,13 +28,13 @@ function addTodo() {
         infoTextElement.style.fontStyle = "italic";
         infoTextElement.style.fontFamily = "arial";
 
-       
+
         requestAnimationFrame(function () {
-        infoTextElement.style.animation = "blink 0.5s 2";
+            infoTextElement.style.animation = "blink 0.5s 2";
         });
         return;
     }
-
+    
 
     const todoObject = { name: todoText, completed: false };
     allTheTodos.push(todoObject);
@@ -77,7 +77,7 @@ function addTodo() {
 
         allTheTodos.splice(indexToRemove, 1);
         completedElement.textContent = completed + " completed";
-        }
+    }
     )
 
     inputToDo.value = "";

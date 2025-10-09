@@ -3,44 +3,48 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-    background: linear-gradient(to bottom, 
-    rgb(246, 190, 189),
-    rgb(254, 126, 125));
+  background: linear-gradient(to bottom,
+      rgb(246, 190, 189),
+      rgb(254, 126, 125));
 }
-  .box {
-   background-color: white;
-   width: 500px;
-   
-   padding: 10px;
-   border-radius: 1px;
-   margin-top: 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation-name: boxSlideIn;
-    animation-duration: 1s;
- }
+
+.box {
+  background-color: white;
+  width: 500px;
+
+  padding: 10px;
+  border-radius: 1px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation-name: boxSlideIn;
+  animation-duration: 1s;
+}
 
 @keyframes boxSlideIn {
   0% {
     transform: translateY(-200px);
     opacity: 0;
   }
+
   60% {
     transform: translateY(30px);
     opacity: 1;
   }
+
   80% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
 
 .headerInput {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
@@ -52,9 +56,11 @@ body {
   from {
     opacity: 0%;
   }
+
   to {
     opacity: 50%;
   }
+
   to {
     opacity: 100%;
   }
@@ -97,25 +103,25 @@ body {
 }
 
 .inputToDo:focus {
- border-color: blue;
- outline: none;
+  border-color: blue;
+  outline: none;
 }
 
 .completed {
-   text-decoration: line-through;
-   color: grey;
-   cursor: pointer;
-   transition: color 0.2s ease-in;
+  text-decoration: line-through;
+  color: grey;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
 }
 
 .trashcan {
-   font-size: large;
-   margin-left: 3px;
-   cursor: pointer;
+  font-size: large;
+  margin-left: 3px;
+  cursor: pointer;
 }
 
 .trashcan:hover {
-   filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 .h1 {
@@ -129,45 +135,56 @@ body {
 }
 
 @keyframes blink {
-  0%   { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .todoContainer {
-   background-color: white;
-   width: 500px;
-   
-   padding: 10px;
-   border-radius: 1px;
-   margin-top: 0px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  background-color: white;
+  width: 500px;
+
+  padding: 10px;
+  border-radius: 1px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #todoList {
-   list-style-type: none;
-   cursor: pointer;
-    padding: 0;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0;
 }
+
 #todoList li {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   width: 100%;
-   font-size: 30px;
-   font-family: 'Arial', sans-serif;
-   padding: 8px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Arial', sans-serif;
+  padding: 8px 0;
   opacity: 0;
   transform: translateY(-10px);
   animation: todoListslideIn 0.5s ease-out forwards;
 }
+
 @keyframes todoListslideIn {
-from {
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
